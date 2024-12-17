@@ -12,4 +12,4 @@ this module is about the inheritance in C++.
 this module is about the Subtype polymorphism, abstract classes and interfaces.
 
 <br>
-In each file you will find the subject of the module and the exercises that I have done. Feel free to use it as a reference or to ask me any questions about the exercises.
+In each directory you will find the subject of the module and the exercises that I have done. Feel free to use it as a reference or to ask me any questions about the exercises.
