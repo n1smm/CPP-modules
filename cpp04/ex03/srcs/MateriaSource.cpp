@@ -6,7 +6,7 @@
 /*   By: tjuvan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 15:38:00 by tjuvan            #+#    #+#             */
-/*   Updated: 2024/12/19 16:49:52 by tjuvan           ###   ########.fr       */
+/*   Updated: 2024/12/19 17:24:10 by tjuvan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ MateriaSource::MateriaSource(const MateriaSource &other) : _source_inventory() ,
 
 MateriaSource::~MateriaSource()
 {
-	for (int i = 0; i <= _inv_idx; i++)
+	for (int i = 0; i <= 3; i++)
 		delete	_source_inventory[i];
 	std::cout << "MateriaSource deconstr\n";
 }

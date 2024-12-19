@@ -6,7 +6,7 @@
 /*   By: tjuvan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 18:11:24 by tjuvan            #+#    #+#             */
-/*   Updated: 2024/12/19 16:12:32 by tjuvan           ###   ########.fr       */
+/*   Updated: 2024/12/19 17:23:09 by tjuvan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ Character 			&Character::operator=(const Character &other)
 /* deconstructor */
 Character::~Character()
 {
-	for (int i = 0; i <= _inv_index; i++)
+	for (int i = 0; i <= 3; i++)
 		delete	_inventory[i];
-	for (int i = 0; i <= _dis_index; i++)
+	for (int i = 0; i <= 3; i++)
 		delete	_discarded[i];
 }
 
@@ -61,7 +61,7 @@ void				Character::equip(AMateria *m)
 		std::cout << "Inventory full!\n";
 		return ;
 	}
-	_inventory[_inv_index++] = m;
+	_inventory[_inv_index++] = m->clone();
 	std::cout << "equipped " << m->getType() << " to _inventory[" << _inv_index - 1 << "]\n";
 }
 
@@ -95,18 +95,18 @@ void				Character::use(int idx, ICharacter &target)
 /* ostream overload */
 void						print_inventory( std::ostream &ostr, const Character &obj)
 {
-	ostr << "inventory ->\t[";
-	for (int i = 0; i <= obj.getInvIdx(); i++)
+	ostr << "inventory ->\t[\t";
+	for (int i = 0; i < obj.getInvIdx(); i++)
 		ostr << obj.getMateriaInv(i) << "\t";
-	ostr << "]\ndiscarderd ->\t[";
-	for (int i = 0; i <= obj.getDisIdx(); i++)
+	ostr << "]\ndiscarderd ->\t[\t";
+	for (int i = 0; i < obj.getDisIdx(); i++)
 		ostr << obj.getMateriaDis(i) << "\t";
 	ostr << "]\n";
 }
 
 std::ostream				&operator<<( std::ostream &ostr, const Character &obj)
 {
-	std::cout << "*** " << obj.getName() << " ***\n";
+	ostr << "*** " << obj.getName() << " ***\n";
 	print_inventory(ostr, obj);
 	return (ostr);
 }
