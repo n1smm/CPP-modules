@@ -6,7 +6,7 @@
 /*   By: tjuvan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 15:00:21 by tjuvan            #+#    #+#             */
-/*   Updated: 2024/12/17 15:20:08 by tjuvan           ###   ########.fr       */
+/*   Updated: 2024/12/19 15:13:21 by tjuvan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ class	ICharacter
 		virtual	void				equip( AMateria *m ) 				= 0;
 		virtual	void				unequip( int idx )					= 0;
 		virtual	void				use( int idx, ICharacter &target)	= 0;
+		virtual						~ICharacter( void ) {}
 };

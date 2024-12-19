@@ -6,7 +6,7 @@
 /*   By: tjuvan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 15:20:42 by tjuvan            #+#    #+#             */
-/*   Updated: 2024/12/17 18:24:40 by tjuvan           ###   ########.fr       */
+/*   Updated: 2024/12/19 14:52:29 by tjuvan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,13 @@
 class	Character: public ICharacter
 {
 	public:
+		/* getters */
+		std::string const	&getName( void )			const;
+		std::string	const	&getMateriaInv( int idx)	const;
+		std::string	const	&getMateriaDis( int idx)	const;
+		int			const	&getInvIdx( void ) 			const;
+		int			const	&getDisIdx( void )			const;
 		/* methods */
-		std::string const	&getName( void )	const;
 		void				equip( AMateria *m );
 		void				unequip( int idx );
 		void				use( int idx, ICharacter &target);
@@ -33,5 +38,10 @@ class	Character: public ICharacter
 
 	private:
 		std::string			_name;
-		int					_inventory[4];
+		AMateria			*_inventory[4];
+		AMateria			*_discarded[1024];
+		int					_inv_index;
+		int					_dis_index;
 };
+
+std::ostream				&operator<<( std::ostream &ostr, const Character &obj);

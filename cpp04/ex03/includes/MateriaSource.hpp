@@ -6,14 +6,14 @@
 /*   By: tjuvan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 16:38:41 by tjuvan            #+#    #+#             */
-/*   Updated: 2024/12/17 16:44:49 by tjuvan           ###   ########.fr       */
+/*   Updated: 2024/12/19 16:10:37 by tjuvan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "IMateriaSource.hpp"
 
-class MateriaSource : public IMateriSource
+class MateriaSource : public IMateriaSource
 {
 	public:
 		/* methods */
@@ -29,7 +29,8 @@ class MateriaSource : public IMateriSource
 		MateriaSource		&operator=( const MateriaSource &other);
 
 	private:
-		int		_source_inventory[4];
+		AMateria		*_source_inventory[4];
+		int				_inv_idx;
 
 
 };

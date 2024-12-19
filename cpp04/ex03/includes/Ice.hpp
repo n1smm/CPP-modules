@@ -6,7 +6,7 @@
 /*   By: tjuvan <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 14:42:51 by tjuvan            #+#    #+#             */
-/*   Updated: 2024/12/17 18:44:03 by tjuvan           ###   ########.fr       */
+/*   Updated: 2024/12/19 12:10:18 by tjuvan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class	Ice : public AMateria
 	public:
 		/* methods */
 		Ice			*clone( void )	const;
-		void				use(ICharacter &target);
+		void		use(ICharacter &target);
 
 		/* constructors */
 		Ice( void );
