@@ -6,7 +6,7 @@
 /*   By: thiew <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 19:38:51 by thiew             #+#    #+#             */
-/*   Updated: 2024/10/18 13:03:26 by thiew            ###   ########.fr       */
+/*   Updated: 2025/01/17 14:24:03 by tjuvan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,11 @@ int	main(void)
 	do
 	{
 		std::cout << BOLD_GREEN MAIN_QUESTION RESET;
-		std::cin >> input;
+		if(!(std::cin >> input))
+		{
+			std::cout << "Input error or EOF detected. Exiting..." << std::endl;
+			break;
+		}
 		if (input == "ADD")
 		{
 			contact.change_data();
