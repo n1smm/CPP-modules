@@ -1,4 +1,4 @@
-#CPP MODULES
+# CPP MODULES
 
 ## Module 00
 this module is about the introduction to C++ and the basics of the language.
@@ -10,6 +10,16 @@ this module is about the ad-hoc polymorphism, operators overload and canonical c
 this module is about the inheritance in C++.
 ## Module 04
 this module is about the Subtype polymorphism, abstract classes and interfaces.
+## Module 05
+this module is about the templates and the STL.
+## Module 06
+this module is about the exceptions and the standard library.
+## Module 07
+this module is about the containers and iterators in C++.
+## Module 08
+this module is about more advanced uses of containers.
+## Module 09
+this module is about implementing all the knowledge acquired in the previous modules by creating three differentsemi-complexe projects.
 
 <br>
 In each directory you will find the subject of the module and the exercises that I have done. Feel free to use it as a reference or to ask me any questions about the exercises.
